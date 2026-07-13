@@ -4,7 +4,9 @@ import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
 import Education from "./sections/Education/Education";
+import Github from "./sections/Github/Github";
 import Contact from "./sections/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       <Skills />
       <Projects />
       <Education />
+      <Github />      
       <Contact />
+      <Footer />
     </div>
   );
 }
