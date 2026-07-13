@@ -1,13 +1,15 @@
+import Navbar from "./components/layout/Navbar";
+
+import Hero from "./sections/Hero/Hero";
+
 function App() {
   return (
-    <div className="bg-[#030712] min-h-screen text-white">
-      <h1 className="text-5xl font-bold text-center pt-20">
-        Ashish.dev
-      </h1>
+    <div className="bg-[#030712] text-white">
 
-      <p className="text-center text-gray-400 mt-5">
-        Portfolio Under Development 🚀
-      </p>
+      <Navbar />
+
+      <Hero />
+
     </div>
   );
 }
