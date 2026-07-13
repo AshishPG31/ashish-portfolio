@@ -19,32 +19,37 @@ function Hero() {
           transition={{ duration: 0.8 }}
         >
 
-          <p className="text-blue-500 text-xl">
+          <p className="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold">
             {portfolioData.hero.greeting}
           </p>
 
-          <h1 className="text-6xl font-black mt-4">
-            {portfolioData.hero.name}
-          </h1>
+          <h1 className="mt-4 text-6xl lg:text-7xl font-extrabold leading-tight">
+  <span className="text-white">Ash</span>
+  <span className="text-blue-500">ish</span>
+</h1>
 
           <TypeAnimation
             sequence={[
-              "Full Stack Web Developer",
-              2000,
-              "Generative AI Enthusiast",
-              2000,
-              "Problem Solver",
-              2000,
+                "Full Stack Web Developer",
+                1800,
+                "React Developer",
+                1800,
+                "Generative AI Enthusiast",
+                1800,
+                "Python Developer",
+                1800,
             ]}
             wrapper="h2"
-            speed={40}
+            speed={50}
             repeat={Infinity}
-            className="text-3xl mt-6 text-gray-300"
-          />
+            className="text-3xl lg:text-4xl font-semibold text-gray-300 mt-6"
+            />
 
           <p className="text-gray-400 mt-8 leading-8 max-w-lg">
-            Building beautiful, scalable web applications
-            and AI-powered solutions with modern technologies.
+            I specialize in creating responsive web applications,
+            modern user interfaces, and AI-powered solutions using
+            React, JavaScript, Python, and SQL. I'm passionate about
+            solving real-world problems through clean, efficient code.
           </p>
 
           <div className="flex gap-5 mt-10">

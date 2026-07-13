@@ -20,12 +20,13 @@ const portfolioData = {
     resume: "/resume.pdf",
   },
 
-  hero: {
-    greeting: "Hi, I'm",
-    name: "Ashish",
-    title: "Full Stack Web Developer",
-    tagline: "Building modern web experiences with AI.",
-  },
+ hero: {
+  greeting: "Hello, I'm",
+  name: "Ashish",
+  title: "Full Stack Web Developer",
+  tagline:
+    "Building modern, responsive web applications and AI-powered solutions with clean code and exceptional user experiences.",
+},
 
   about: {
     description:
