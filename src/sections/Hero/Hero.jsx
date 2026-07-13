@@ -7,12 +7,24 @@ import portfolioData from "../../data/portfolioData";
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center pt-20">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
+      {/* Background Effects */}
 
+    <div className="absolute -top-40 -left-32 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-3xl"></div>
+
+    <div className="absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-purple-600/15 blur-3xl"></div>  
+
+    <div className="absolute inset-0 opacity-5"
+        style={{
+            backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+        }}
+        ></div>
+    <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
         {/* Left */}
-
+    
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
