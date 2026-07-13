@@ -1,3 +1,4 @@
+import { FaChevronDown } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
@@ -8,6 +9,29 @@ import portfolioData from "../../data/portfolioData";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
 
 function Hero() {
   return (
@@ -26,13 +50,12 @@ function Hero() {
             backgroundSize: "40px 40px",
         }}
         ></div>
-    <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
-        {/* Left */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">          {/* Left */}
     
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
         >
 
           <p className="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold">
@@ -118,7 +141,7 @@ function Hero() {
 
         {/* Right */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -141,9 +164,46 @@ function Hero() {
             "
           />
 
-        </motion.div>
+        </motion.div> */}
 
       </div>
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{
+            opacity: 1,
+            x: 0,
+            y: [0, -10, 0],
+        }}
+        transition={{
+            opacity: { duration: 1 },
+            x: { duration: 1 },
+            y: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            },
+        }}
+        className="flex justify-center relative -ml-6"
+        >
+        {/* Background Glow */}
+        <div className="absolute w-80 h-80 rounded-full bg-blue-500/20 blur-3xl"></div>
+
+        <img
+            src={profile}
+            alt="Ashish"
+            className="
+            w-[320px]
+            lg:w-[360px]
+            rounded-full
+            border-4
+            border-blue-500
+            shadow-[0_0_60px_rgba(59,130,246,0.35)]
+            transition-all
+            duration-500
+            hover:scale-105
+            "
+          />
+        </motion.div>
 
     </section>
   );
