@@ -5,6 +5,10 @@ import profile from "../../assets/images/profile.jpeg";
 
 import portfolioData from "../../data/portfolioData";
 
+import { FaArrowRight, FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -64,21 +68,51 @@ function Hero() {
             solving real-world problems through clean, efficient code.
           </p>
 
-          <div className="flex gap-5 mt-10">
-
-            <button className="bg-blue-600 px-7 py-4 rounded-xl hover:scale-105 transition">
-              View Projects
-            </button>
-
+          <div className="mt-10 flex flex-wrap gap-4">
+            {/* Primary Button */}
             <a
-              href="/resume.pdf"
-              target="_blank"
-              className="border border-gray-700 px-7 py-4 rounded-xl hover:border-blue-500 transition"
-            >
-              Resume
+                href="#projects"
+                className="group inline-flex items-center gap-3 rounded-xl bg-blue-600 px-7 py-4 font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-[0_10px_30px_rgba(59,130,246,0.4)]">
+                View My Work
+
+                <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+            {/* Secondary Button */}
+            <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 rounded-xl border border-gray-700 px-7 py-4 font-semibold transition-all duration-300 hover:border-blue-500 hover:bg-white/5 hover:-translate-y-1">
+                <FaDownload />
+                Download Resume
             </a>
 
-          </div>
+            </div>
+            <div className="mt-10 flex items-center gap-6 text-2xl">
+
+            <a
+                href={portfolioData.personal.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 transition hover:text-white hover:scale-110">
+                <FaGithub />
+            </a>
+
+            <a
+                href={portfolioData.personal.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 transition hover:text-blue-400 hover:scale-110">
+                <FaLinkedin />
+            </a>
+
+            <a
+                href={`mailto:${portfolioData.personal.email}`}
+                className="text-gray-400 transition hover:text-red-400 hover:scale-110">
+                <MdEmail />
+            </a>
+
+            </div>
 
         </motion.div>
 
