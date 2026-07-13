@@ -27,7 +27,7 @@ function Projects() {
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 mt-20">
+        <div className="grid lg:grid-cols-2 gap-18 mt-20">
 
           {projects.map((project) => (
             <ProjectCard

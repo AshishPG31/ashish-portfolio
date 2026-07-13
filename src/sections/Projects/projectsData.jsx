@@ -1,10 +1,22 @@
+import studyMind from "../../assets/images/studymind.png";
+import resumeAI from "../../assets/images/resume-ai.png";
+
 export const projects = [
   {
     id: 1,
     title: "StudyMind AI",
+    image: studyMind,
     status: "Completed",
+
     description:
       "An AI-powered study assistant that allows students to upload PDFs and ask questions using Retrieval-Augmented Generation (RAG).",
+
+    features: [
+      "PDF Upload",
+      "AI Chat",
+      "Semantic Search",
+      "LangChain + FAISS",
+    ],
 
     tech: [
       "React",
@@ -12,24 +24,32 @@ export const projects = [
       "Python",
       "LangChain",
       "FAISS",
-      "LLM",
+      "PostgreSQL",
     ],
 
     github: "https://github.com/AshishPG31",
 
-    demo: "https://ashishpg31.github.io/StudyMind-AI-Assistant/",
-
-    featured: true,
+    demo: "#",
   },
 
   {
     id: 2,
+
     title: "AI Resume Analyzer",
+
+    image: resumeAI,
 
     status: "In Progress",
 
     description:
-      "Analyzes resumes using AI, provides ATS score, keyword suggestions and personalized improvements.",
+      "AI-powered resume analyzer that provides ATS score, resume feedback, keyword suggestions and improvement recommendations.",
+
+    features: [
+      "ATS Score",
+      "Keyword Analysis",
+      "Resume Feedback",
+      "AI Suggestions",
+    ],
 
     tech: [
       "React",
@@ -41,7 +61,5 @@ export const projects = [
     github: "#",
 
     demo: "#",
-
-    featured: false,
   },
 ];
