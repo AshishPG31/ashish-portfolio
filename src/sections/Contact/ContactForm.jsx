@@ -16,10 +16,10 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_p3ccss9",
-        "template_78pvo64",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "yBH7ly3Ekn4lc6fYE"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
