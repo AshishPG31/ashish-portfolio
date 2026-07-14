@@ -8,6 +8,7 @@ function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,7 +28,9 @@ function ContactForm() {
           setMessage("✅ Message sent successfully!");
           form.current.reset();
         },
-        () => {
+        (error) => {
+          console.log("EmailJS Error:", error);
+
           setLoading(false);
           setMessage("❌ Failed to send message. Please try again.");
         }
