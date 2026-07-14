@@ -3,7 +3,10 @@ import ProjectCard from "./ProjectCard";
 
 function Projects() {
   return (
-    <section id="projects" className="py-32">
+    <section
+      id="projects"
+      className="scroll-mt-24 min-h-screen py-28 flex items-center"
+    >
 
       <div className="max-w-7xl mx-auto px-6">
 

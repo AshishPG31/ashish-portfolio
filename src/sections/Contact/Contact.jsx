@@ -7,7 +7,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-32 overflow-hidden"
+      className="relative scroll-mt-24 min-h-screen py-28 flex items-center overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-blue-500/10 blur-[140px] rounded-full" />

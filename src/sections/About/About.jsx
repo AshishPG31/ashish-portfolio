@@ -9,8 +9,8 @@ import FeatureCard from "./FeatureCard";
 
 function About() {
 return (
-  <section id="about" className="py-32">
-    <div className="max-w-7xl mx-auto px-6">
+    <section id="about" className="scroll-mt-24 min-h-screen py-28 flex items-center">
+      <div className="max-w-7xl mx-auto px-6">
 
       {/* Heading */}
       <div className="text-center">

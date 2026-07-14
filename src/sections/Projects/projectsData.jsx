@@ -29,7 +29,7 @@ export const projects = [
 
     github: "https://github.com/AshishPG31",
 
-    demo: "#",
+    demo: "https://ashishpg31.github.io/StudyMind-AI-Assistant/",
   },
 
   {
