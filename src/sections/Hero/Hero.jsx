@@ -87,7 +87,7 @@ function Hero() {
             </a>
             {/* Secondary Button */}
             <a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-xl border border-gray-700 px-7 py-4 font-semibold transition-all duration-300 hover:border-blue-500 hover:bg-white/5 hover:-translate-y-1">
